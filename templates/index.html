@@ -5,57 +5,96 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <br>
-    <div class="navbar">
-        <img src="{% static 'images/R.jpg'%}" style="height: 40px; width: 45px;" alt="XD">
-        <b>REVA </b><b style="color: grey;">University</b>
-        <a style="margin-left: 1140px;" href="/">Home</a><a href="/IS"></a>
-        <a style="margin-left: 20px;" href="/reg">Register</a>
-    </div>
-    <div class="row">
-        <div class="imgs">
-                <img src="{% static 'images/b.jpg'%}" style="width: 600px" alt="XD">
+    <div class="main">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-8">
+                <a class="navbar-brand" href="#" style="font-size: 200%;">
+                    <img src="/static/images/R.jpg" width="45" height="45" class="d-inline-block align-top" alt="">
+                    <b>REVA </b><b style="color: grey;">University</b>
+                </a>
+            </div>
+            <div class="col-xs-6 col-md-4" style="text-align: end;">
+                <a class="navbar-brand" href="/" style="font-size: 200%;">Home</a>
+                <a href="/IS"></a>
+                <a class="navbar-brand" href="/reg" style="font-size: 200%;">Register</a>
+            </div>
         </div>
-        <div class="imgs">
-            <p>
-                The REVA University is a private state University located in Bangalore, Karnataka. 
-                The Reva Group of Educational Institutions was established in 2002, managed by 
-                Rukmini Educational Charitable Trust. In 2004 it was taken over by Rukmini 
-                Educational Charitable Trust led by Dr. P. Shyama Raju.
-            </p>
+
+        <div class="container-fluid" style="    padding-top: 3%;
+        padding-left: 0;">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-5">
+                    <img src="/static/images/b.jpg" alt="XD" class="img-fluid">
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4">
+                    <p style="font-size: 1.7rem;">The REVA University is a private state University located in
+                        Bangalore, Karnataka.
+                        The Reva Group of Educational Institutions was established in 2002, managed by
+                        Rukmini Educational Charitable Trust. In 2004 it was taken over by Rukmini
+                        Educational Charitable Trust led by Dr. P. Shyama Raju.</p>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3">
+                    <div class="login">
+                        <form action="/IS">
+                            <div class="form-group row">
+                                <div class="col-sm-12" style="padding: 5%;">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+                                    <input type="text" class="form-control pass" name="n1" style="font-size: 1.2rem;
+                                    height: 45%;">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12" style="padding: 5%;">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                                    <input type="password" class="form-control" style="font-size: 1.2rem;
+                                    height: 45%;">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6" style="padding: 5%;">
+                                    <button type="submit">Login</button>
+                                </div>
+                                <div class="col-sm-6" style="padding: 5%;">
+                                    <button type="reset">Reset</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container my-5">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <p>
+                            P. Shyama Raju is an Indian entrepreneur, philanthropist, and an educationist based
+                            in Bengaluru, Karnataka. He is the Chairman & Managing Director of DivyaSree
+                            Developers Pvt. Ltd, Chairman at Rukmini Educational Charitable Trust, and the
+                            Chancellor of REVA University, Bengaluru.
+                        </p>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <img src="/static/images/s.jpeg" alt="XD" class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="login">
-            <form action="/IS">    
-                <label style="padding-right: 38px;"> Name : </label><input type="text" name="n1"><br><br>   
-                <label> Password : </label><input class="pass" type="password"><br><br>
-                <button type="submit">Login</button>
-                <button type="reset">Reset</button>
-            </form>
-        </div>
-    </div>
-    <div>
-        <div class="col">
-            <img src="{% static 'images/s.jpeg'%}" style="height: 150px; width: 250px;" alt="XD">
-        </div>
-        <div class="col">
-            <p>
-                P. Shyama Raju is an Indian entrepreneur, philanthropist, and an educationist based 
-                in Bengaluru, Karnataka. He is the Chairman & Managing Director of DivyaSree 
-                Developers Pvt. Ltd, Chairman at Rukmini Educational Charitable Trust, and the 
-                Chancellor of REVA University, Bengaluru.
-            </p>
-        </div>
-    </div>
-    <div class="abt">
-        <h3>About</h3>
-        <p>The REVA University is a private state University located in Bangalore, Karnataka. 
-           The Reva Group of Educational Institutions was established in 2002, managed by 
-           Rukmini Educational Charitable Trust. In 2004 it was taken over by Rukmini 
-           Educational Charitable Trust led by Dr. P. Shyama Raju.
-        </p>
+
+        <footer class="text-center text-lg-start" style="background-color: rgb(228, 156, 24);">
+            <div class="container d-flex justify-content-center py-5">
+                <p>
+                    The REVA University is a private state University located in Bangalore, Karnataka.
+                    The Reva Group of Educational Institutions was established in 2002, managed by
+                    Rukmini Educational Charitable Trust. In 2004 it was taken over by Rukmini
+                    Educational Charitable Trust led by Dr. P. Shyama Raju.
+                </p>
+            </div>
+        </footer>
+
     </div>
 </body>
 </html>

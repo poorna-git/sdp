@@ -1,35 +1,51 @@
-<html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>Document</title>
-</head>
-<body>
-    <br>
-    <div class="navbar">
-        <img src="{% static 'images/R.jpg'%}" style="height: 40px; width: 45px;" alt="XD">
-        <b>REVA </b><b style="color: grey;">University</b>
-        <a style="margin-left: 1140px;" href="/">Home</a><a href="/IS"></a>
-        <a style="margin-left: 20px;" href="/reg">Register</a>
-    </div>
-    <div class="rege">
-        <label style="padding-right: 55px;"> Name : </label><input type="text" name="n1"><br><br>   
-        <label> Password : </label><input class="pass" type="password"><br><br>
-        <label style="padding-right: 52px;"> e-Mail : </label><input type="email"><br><br>
-        <label style="padding-right: 52px;"> Mobile : </label><input type="number"><br><br>
-        <button type="submit">Register</button>
-        <button type="reset">Reset</button>
-    </div>
-    <div class="abt1">
-        <h3>About</h3>
-        <p>The REVA University is a private state University located in Bangalore, Karnataka. 
-           The Reva Group of Educational Institutions was established in 2002, managed by 
-           Rukmini Educational Charitable Trust. In 2004 it was taken over by Rukmini 
-           Educational Charitable Trust led by Dr. P. Shyama Raju.
-        </p>
-    </div>
-</body>
-</html>
+{% extends "base.html" %}
+{% block main_body %}
+        <div class="container-fluid" style=" padding-top: 3%; padding-left: 0;">
+            <div class="row">
+                <div class="col-xl-5 col-lg-5 col-md-4">
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4">
+                    <div class="login">
+                        <form action="/IS">
+                            <div class="form-group row">
+                                <div class="col-sm-12" style="padding: 5%;">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Name</label>
+                                    <input type="text" class="form-control pass" name="n1" style="font-size: 1.2rem;
+                                    height: 45%;">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12" style="padding: 5%;">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                                    <input type="password" class="form-control" style="font-size: 1.2rem;
+                                    height: 45%;">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12" style="padding: 5%;">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">e-Mail</label>
+                                    <input type="password" class="form-control" style="font-size: 1.2rem;
+                                    height: 45%;">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-12" style="padding: 5%;">
+                                    <label for="inputPassword" class="col-sm-2 col-form-label">Mobile</label>
+                                    <input type="password" class="form-control" style="font-size: 1.2rem;
+                                    height: 45%;">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6" style="margin-left: 32%;">
+                                    <button type="submit">Register</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-4">
+                </div>
+            </div>
+        </div>
+        <br>
+{% endblock %}

@@ -1,64 +1,46 @@
-<html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
-    <title>Document</title>
-</head>
-<body>
-    <br>
-    <div class="navbar">
-        <img src="{% static 'images/R.jpg'%}" style="height: 40px; width: 45px;" alt="XD">
-        <b>REVA </b><b style="color: grey;">University</b>
-        <a style="margin-left: 1140px;" href="/">Home</a><a href="/IS"></a>
-        <a style="margin-left: 20px;" href="/reg">Register</a>
-    </div>
-    <div class="row">
-        <div class="imgs">
-            <p style="font-size: 60px;">
-                Welcome to EC Page.
-                Some information about students.
-                If not registered click on Register.
-            </p>
+{% extends "base.html" %}
+{% block main_body %}
+        <div class="container-fluid" style=" padding-top: 3%; padding-left: 0;">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                    <div class="imgs">
+                        <p>
+                            Welcome to the data page.
+                            If u want to login visit CS page and enter details,
+                            if not registered click on Register.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="tt">
+                            <table>
+                                <tr style="text-align: left;">
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Phone</th>
+                                    <th>Semester</th>
+                                </tr>
+                                <tr>
+                                    <td>R19CS267</td>
+                                    <td>S Poorna Sai Teja</td>
+                                    <td>9920134501</td>
+                                    <td style="text-align: center;">IV</td>
+                                </tr>
+                                <tr>
+                                    <td>R19CS261</td>
+                                    <td>Rohith K Raju</td>
+                                    <td>8920231501</td>
+                                    <td style="text-align: center;">IV</td>
+                                </tr>
+                                <tr>
+                                    <td>R19CS79</td>
+                                    <td>Sai Kiran S</td>
+                                    <td>7720134501</td>
+                                    <td style="text-align: center;">IV</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tt">
-            <table>
-                <tr style="text-align: left;">
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Semester</th>
-                </tr>
-                <tr>
-                    <td>R19CS267</td>
-                    <td>S Poorna Sai Teja</td>
-                    <td>9920134501</td>
-                    <td style="text-align: center;">IV</td>
-                </tr>
-                <tr>
-                    <td>R19CS261</td>
-                    <td>Rohith K Raju</td>
-                    <td>8920231501</td>
-                    <td style="text-align: center;">IV</td>
-                </tr>
-                <tr>
-                    <td>R19CS79</td>
-                    <td>Sai Kiran S</td>
-                    <td>7720134501</td>
-                    <td style="text-align: center;">IV</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="abt2">
-        <h3>About</h3>
-        <p>The REVA University is a private state University located in Bangalore, Karnataka. 
-           The Reva Group of Educational Institutions was established in 2002, managed by 
-           Rukmini Educational Charitable Trust. In 2004 it was taken over by Rukmini 
-           Educational Charitable Trust led by Dr. P. Shyama Raju.
-        </p>
-    </div>
-</body>
-</html>
+{% endblock %}
